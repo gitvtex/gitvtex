@@ -1,9 +1,9 @@
 body {
-    background-image: url(Background_Image.jpg);
-    background-color: darkblue;
+    background-image: url(background_image_2.PNG);
+    background-color: rgb(73, 64, 57);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-size: cover;
     padding: 0;
     margin: 0;
     border: 0;
@@ -11,8 +11,7 @@ body {
 
 .vtex {
     color: rgb(10, 53, 83);
-    background-color: aliceblue;
-    opacity: 0.8;
+    background-image: linear-gradient(to bottom right, rgba(234, 238, 255, 0.522), rgba(15, 61, 26, 0.423));
     font-size: 2rem;
     font-weight: bold;
     padding: 0.5%;
@@ -38,6 +37,9 @@ body {
  margin: 0;
  padding: 0;
  border: 0;
+ position: absolute;
+ top: 0;
+ bottom: 0;
 }
 
 p {
@@ -45,7 +47,7 @@ p {
     color: whitesmoke;
 }
 
-.rules-text{
+.rules-text, .about-text {
     display: flex;
     text-align: left;
     padding: 5% 1% 5% 5%;
@@ -60,14 +62,15 @@ p {
     
 }
 
-.rules-header{
+.rules-header, .about-header{
     display: flex;
     text-align: center;
     justify-content: center;
-    padding: 20% 0% 2% 0%;
+    padding: 30% 0% 2% 0%;
     margin: 0rem;
-    border-bottom: 0.3rem;
+    border-bottom: 0.2rem;
     font-size: 3rem;
+    color: rgb(186, 201, 189);
     
 }
 
@@ -81,3 +84,12 @@ a:hover {
     color:black;
     text-decoration: underline;
 }
+
+.blank-space {
+    background-image: url(/Background_Image.jpg);
+    background-size:cover;
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    padding: 28%;
+    position: relative;
