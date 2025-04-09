@@ -1,0 +1,66 @@
+body {
+    background-image: url(images/Background_Image.jpg);
+    background-color: darkblue;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 0;
+    margin: 0;
+    border: 0:
+}
+
+.vtex {
+    color: rgb(10, 53, 83);
+    background-color: aliceblue;
+    opacity: 0.8;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 1%;
+    padding-bottom: auto;
+    border: 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-top: 0rem;
+    margin-bottom: 0;
+
+
+    
+}
+
+.header {
+ margin: 0;
+ padding: 0;
+ border: 0;
+}
+
+p {
+    text-align: center;
+    color: whitesmoke;
+}
+
+.rules-text{
+    display: flex;
+    text-align: center;
+    padding: 5%;
+    margin: 2rem;
+    border: 0.3rem solid;
+    border-color: rgb(0, 88, 139);
+    
+}
+
+.rules-header{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 1;
+    margin: 2rem;
+    font-size: 3rem;
+    
+}
