@@ -1,5 +1,5 @@
 body {
-    background-image: url(images/Background_Image.jpg);
+    background-image: url(Background_Image.jpg);
     background-color: darkblue;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -47,11 +47,16 @@ p {
 
 .rules-text{
     display: flex;
-    text-align: center;
-    padding: 8%;
-    margin: 2rem;
+    text-align: left;
+    padding: 5% 1% 5% 5%;
+    margin: 3rem;
+    margin-top: 0rem;;
     border: 0.3rem solid;
-    border-color: rgb(0, 88, 139);
+    border-color: rgb(51, 51, 47);
+    background-color: rgba(205, 232, 242, 0.8);
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
     
 }
 
@@ -59,8 +64,19 @@ p {
     display: flex;
     text-align: center;
     justify-content: center;
-    padding: 1;
-    margin: 2rem;
+    padding: 20% 0% 2% 0%;
+    margin: 0rem;
+    border-bottom: 0.3rem;
     font-size: 3rem;
     
+}
+
+a {
+    text-decoration: none;
+    color: rgb(43, 81, 98);
+    cursor: pointer;
+}
+
+a:hover {
+    color:black;
 }
