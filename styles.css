@@ -18,7 +18,6 @@ body {
     text-align: center;
     display: flex;
     justify-content: center;
-    justify-content: space-between;
     padding-left: 15%;
     padding-right: 15%;
     padding-top: 1%;
@@ -42,12 +41,16 @@ body {
  bottom: 0;
 }
 
+#font-color {
+    color: black;
+}
+
 p {
     text-align: center;
     color: whitesmoke;
 }
 
-.rules-text, .about-text {
+.rules-text /*, .about-text */{
     display: flex;
     text-align: left;
     padding: 5% 1% 5% 5%;
@@ -55,14 +58,15 @@ p {
     margin-top: 0rem;;
     border: 0.3rem solid;
     border-color: rgb(51, 51, 47);
-    background-color: rgba(205, 232, 242, 0.8);
+    background-color: rgba(173, 156, 106, 0.8);
+    border-radius: 10px;
     font-size: x-large;
     font-weight: bold;
     color: black;
     
 }
 
-.rules-header, .about-header{
+.rules-header /*, .about-header */{
     display: flex;
     text-align: center;
     justify-content: center;
@@ -70,7 +74,7 @@ p {
     margin: 0rem;
     border-bottom: 0.2rem;
     font-size: 3rem;
-    color: rgb(186, 201, 189);
+    color: rgb(93, 124, 147);
     
 }
 
@@ -86,10 +90,124 @@ a:hover {
 }
 
 .blank-space {
-    background-image: url(/Background_Image.jpg);
+    /* background-image: url(/Background_Image.jpg); */
     background-size:cover;
     background-position: center;
     background-color: transparent;
     background-repeat: no-repeat;
     padding: 28%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.item-1 {
+    background-image: url(comingsoonsmall.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: aliceblue;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.item-2 {
+    background-image: url(comingsoonsmall.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: aliceblue;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.item-3 {
+    background-image: url(comingsoonsmall.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: aliceblue;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.item-4 {
+    background-image: url(comingsoonsmall.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: aliceblue;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.item-5 {
+    background-image: url(comingsoonsmall.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: aliceblue;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.item-6 {
+    background-image: url(comingsoonsmall.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.p-color {
+    color:rgb(255, 220, 130);
+    background-color: black;;
+    text-align: center;
+    margin-top: 0;
+    border-radius: 10px;
 }
