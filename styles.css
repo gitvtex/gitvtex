@@ -95,7 +95,7 @@ a:hover {
     background-position: center;
     background-color: transparent;
     background-repeat: no-repeat;
-    padding: 28%;
+    padding: 20%;
     font-size: 2rem;
     font-weight: bold;
 }
@@ -127,6 +127,8 @@ a:hover {
     background-color: aliceblue;
     font-size: 2rem;
     font-weight: bold;
+    border: 5px solid rgba(149, 198, 77, 0.8);
+    border-radius: 10px;
 }
 
 .item-2 {
@@ -142,6 +144,8 @@ a:hover {
     background-color: aliceblue;
     font-size: 2rem;
     font-weight: bold;
+    border: 5px solid rgba(149, 198, 77, 0.8);
+    border-radius: 10px;
 }
 
 .item-3 {
@@ -157,6 +161,8 @@ a:hover {
     background-color: aliceblue;
     font-size: 2rem;
     font-weight: bold;
+    border: 5px solid rgba(149, 198, 77, 0.8);
+    border-radius: 10px;
 }
 
 .item-4 {
@@ -172,6 +178,8 @@ a:hover {
     background-color: aliceblue;
     font-size: 2rem;
     font-weight: bold;
+    border: 5px solid rgba(149, 198, 77, 0.8);
+    border-radius: 10px;
 }
 
 .item-5 {
@@ -187,6 +195,8 @@ a:hover {
     background-color: aliceblue;
     font-size: 2rem;
     font-weight: bold;
+    border: 5px solid rgba(149, 198, 77, 0.8);
+    border-radius: 10px;
 }
 
 .item-6 {
@@ -200,14 +210,26 @@ a:hover {
     max-width: 350px;
     height: 300px;
     object-fit: cover;
+    border: 5px solid rgba(149, 198, 77, 0.8);
     border-radius: 10px;
     background-color: aliceblue;
+
+    
 }
 
-.p-color {
+.grow:hover {
+    transform: scale(1.025);
+    transition: 0.2s ease-in-out;
+}
+
+
+.p-color { /* "Custom" word on item boxes*/
     color:rgb(255, 220, 130);
-    background-color: black;;
+    background-color: rgba(0, 0, 0, 0.481);;
     text-align: center;
     margin-top: 0;
-    border-radius: 10px;
+    padding-bottom: 5px;
+    padding-top: 2px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
