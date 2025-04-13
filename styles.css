@@ -242,3 +242,46 @@ a:hover {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+/* Media query*/
+
+@media only screen and (min-width: 320px) {
+    body {
+      background-color: black;
+      background-image: url(background_image_2.PNG);
+      background-size: contain;
+      
+
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    body {
+      background-color: black;
+      background-image: url(background_image_2.PNG);
+      background-size: contain;
+
+    }
+  }@media only screen and (min-width: 992px) {
+    body {
+      background-color: black;
+      background-image: url(background_image_2.PNG);
+      background-size: cover;
+
+    }
+  }@media only screen and (min-width: 1200px) {
+    body {
+      background-color: black;
+      background-image: url(background_image_2.PNG);
+      background-size: cover;
+
+    }
+  }
