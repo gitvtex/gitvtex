@@ -75,7 +75,6 @@ p {
     border-bottom: 0.2rem;
     font-size: 3rem;
     color: rgb(93, 124, 147);
-    
 }
 
 a {
@@ -84,13 +83,12 @@ a {
     cursor: pointer;
 }
 
-a:hover {
+a:hover { 
     color:black;
     text-decoration: underline;
 }
 
-.blank-space {
-    /* background-image: url(/Background_Image.jpg); */
+.blank-space { /* background-image: url(/Background_Image.jpg); */
     background-size:cover;
     background-position: center;
     background-color: transparent;
@@ -100,7 +98,7 @@ a:hover {
     font-weight: bold;
 }
 
-.list {
+.list { /* styles for all listed items */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -217,10 +215,21 @@ a:hover {
     
 }
 
-.grow:hover {
+.grow:hover { /* grow effect on item boxes when hovered over with mouse*/
     transform: scale(1.025);
     transition: 0.2s ease-in-out;
 }
+
+.glow:hover { /* green glow around the item boxes when hovered over with mouse*/
+    color: rgba(55, 255, 0, 0.816);
+    box-shadow:   0 0 25px rgba(55, 255, 0, 0.816);
+}
+
+.glow-text { /* green glow for text */
+    color: rgba(55, 255, 0, 0.816);
+    text-shadow:   0 0 30px rgba(55, 255, 0, 0.816);
+}
+
 
 
 .p-color { /* "Custom" word on item boxes*/
