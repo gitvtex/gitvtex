@@ -65,10 +65,10 @@ p {
     display: flex;
     text-align: center;
     justify-content: center;
-    padding: 30% 0% 2% 0%;
-    margin: 0rem;
-    border-bottom: 0.2rem;
-    color: rgb(93, 124, 147);
+    padding: 0% 0% 0% 0%;
+    margin: 0rem;    
+    border: 5px solid rgba(149, 198, 77, 0.8);
+    border-radius: 10px;
 }
 
 .rules-text /*, .about-text */{
