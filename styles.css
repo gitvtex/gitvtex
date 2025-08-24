@@ -279,19 +279,14 @@ a {
 
 /* Media query*/
 
-@media only screen and (max-width: 320px) {
-    body {
-      background-color: black;
-      background-size: contain;
-      background-image: url(vortex\ logo.png);
-    }
-  }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 768px) and (min-width: 320px) {
     body {
       background-color: black;
       background-image: url(vortex\ logo.png);
       background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
   }
   #bgv {
     display: none;
