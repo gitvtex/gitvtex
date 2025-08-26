@@ -22,7 +22,7 @@ body {
     z-index: -1; /* Ensure the video is behind other content */
 }
 
-.vtex {
+.vtex { /*words inside header */
     color: rgb(10, 53, 83);
     background-color: rgba(104, 108, 111, 0.43);
     font-size: 2rem;
@@ -59,6 +59,7 @@ body {
     color:rgb(255, 220, 130);
     padding: .05rem 1rem;
     border-radius: 25px;
+    margin-top: 1rem;
 }
 
 p {
@@ -68,24 +69,34 @@ p {
 
 .server-live img {
     display: inline-block;
-    padding: 0%;
-    margin: 0rem;
+    padding: 0rem;
+    margin: 10rem 0rem 5rem 0rem;
     border: 5px solid rgba(149, 198, 77, 0.8);
     border-radius: 1%;
     max-width: 73%;
     max-height: auto;
-    
+    position: relative;
 }
 
-.rules-text /*, .about-text */{
+/* .discord-link {       "Come back to this later" cvs
+    position: absolute;
+    top: 300%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    color: aliceblue;
+    border: 5px solid rgba(149, 198, 77, 0.8);
+    padding: 85px 215px 85px 215px;
+}
+*/ 
+.rules-text {
     display: flex;
     text-align: left;
     padding: 5% 1% 5% 5%;
-    margin: 3rem;
+    margin: 0rem;
     margin-top: 0rem;;
     border: 0.3rem solid;
     border-color: rgb(51, 51, 47);
-    background-color: rgba(173, 156, 106, 0.8);
+    background-color: rgb(104, 108, 111);
     border-radius: 10px;
     font-size: x-large;
     font-weight: bold;
@@ -93,11 +104,11 @@ p {
     
 }
 
-.rules-header /*, .about-header */{
+.rules-header {
     display: flex;
     text-align: center;
     justify-content: center;
-    padding: 30% 0% 2% 0%;
+    padding: 10% 0% 2% 0%;
     margin: 0rem;
     border-bottom: 0.2rem;
     font-size: 3rem;
@@ -110,12 +121,12 @@ a {
     cursor: pointer;
 }
 
-.blank-space { /* background-image: url(/Background_Image.jpg); */
+.blank-space { /* blank space between header and item boxes */
     background-size:cover;
     background-position: center;
     background-color: transparent;
     background-repeat: no-repeat;
-    padding: 20%;
+    padding: 25%;
     font-size: 2rem;
     font-weight: bold;
 }
@@ -124,18 +135,26 @@ a {
   display: none;
 }
 
-.list { /* styles for all listed items */
+.list { /* container for all listed items */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 70px;
     max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px 10px;
+    margin: 1 auto;
+    padding: 200px 5rem 200px 5rem;
     font-size: 2rem;
     font-weight: bold;
+    background-color: black;
+    background-image: url(vortex\ logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+    border-top: 5px solid rgba(255, 123, 7, 0.8);
+    border-bottom: 5px solid rgba(255, 123, 7, 0.8);
 }
 
 .item-1 {
@@ -284,9 +303,10 @@ a {
     body {
       background-color: black;
       background-image: url(vortex\ logo.png);
-      background-size: cover;
+      background-size: contain;
       background-attachment: fixed;
       background-position: center;
+      background-repeat: no-repeat;
   }
   #bgv {
     display: none;
@@ -308,5 +328,9 @@ a {
     font-size: 3.5rem;
   }
 
-  }
+}
+
+
+
+
 /* End of media query */
