@@ -307,6 +307,7 @@ a {
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: scroll;
+      background-color: rgba(0, 0, 0, 0.481);
   }
   #bgv {
     display: none;
