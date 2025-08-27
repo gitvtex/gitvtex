@@ -301,53 +301,19 @@ a {
 
 
   @media only screen and (max-width: 768px) and (min-width: 320px)  { 
-   /* body {
-      background-color: black;
-      background-image: url(vortex\ logo.png);
-      background-size: contain;
-      background-attachment:scroll;
+    body {
+      background-image: url(Background_Image.jpg);
       background-position: center;
-      background-repeat: no-repeat;
-      object-fit: cover;
-      */
   }
   #bgv {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* Ensure the video is behind other content */
-    image-resolution: 768dpi;
+    display: none;
   }
 
   #header-items {
     font-size: medium;
 }
 
-  .list { /* container for all listed items */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    max-width: 100%;
-    margin: 1 0;
-    padding: 3rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background-color: black;
-    background-image: url(vortex\ logo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position:top;
-    border-top: 5px solid rgba(255, 123, 7, 0.8);
-    border-bottom: 5px solid rgba(255, 123, 7, 0.8);
-    background-color: black;
-  }  
+}
 
 /* #vtex-word {
     display: inline-block;
