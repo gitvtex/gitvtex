@@ -304,6 +304,9 @@ a {
     body {
       background-image: url(Background_Image.jpg);
       background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-attachment: fixed;
   }
   #bgv {
     display: none;
@@ -313,7 +316,30 @@ a {
     font-size: medium;
 }
 
+.list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 50px 1rem 50px 1rem;
+    font-size: large;
+    font-weight: bold;
+    background-color: black;
+    background-image: url(vortex\ logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position:inherit;
+    border-top: 5px solid rgba(255, 123, 7, 0.8);
+    border-bottom: 5px solid rgba(255, 123, 7, 0.8);
+    background-color: black;
+
 }
+  }
 
 /* #vtex-word {
     display: inline-block;
