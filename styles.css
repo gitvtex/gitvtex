@@ -302,11 +302,12 @@ a {
 
   @media only screen and (max-width: 768px) and (min-width: 320px)  { 
     body {
-      background-image: url(background_image_2.PNG.png);
+      background-image: url(background_image_2.PNG);
       background-position: top;
       background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: scroll;
+      background-size: auto;
+      background-attachment: fixed;
+
       background-color: rgba(0, 0, 0, 0.481);
   }
   #bgv {
@@ -330,24 +331,29 @@ a {
     font-size: large;
     font-weight: bold;
     background-color: black;
-    background-image:none;
+    background-image: url(vortex\ logo.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed;
-    background-position:inherit;
+    background-position:center center;
     border-top: 5px solid rgba(255, 123, 7, 0.8);
     border-bottom: 5px solid rgba(255, 123, 7, 0.8);
     background-color: black;
 
 }
+
+.blank-space {
+    padding: 4%;
   }
 
-/* #vtex-word {
+#vtex-word {
     display: inline-block;
     color: rgb(255, 132, 0);
     text-shadow:   0 0 30px rgba(255, 132, 0, 0.816);
     font-size: 3.5rem;
-  } */
+    padding-top: 5%;
+  } 
+}
 
 
 
