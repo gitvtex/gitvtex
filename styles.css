@@ -302,11 +302,11 @@ a {
 
   @media only screen and (max-width: 768px) and (min-width: 320px)  { 
     body {
-      background-image: url(Background_Image.jpg);
-      background-position: center;
+      background-image: url(background_image_2.PNG.png);
+      background-position: top;
       background-repeat: no-repeat;
-      background-size: auto;
-      background-attachment: fixed;
+      background-size: cover;
+      background-attachment: scroll;
   }
   #bgv {
     display: none;
@@ -322,14 +322,14 @@ a {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     max-width: 100%;
     margin: 0 auto;
     padding: 50px 1rem 50px 1rem;
     font-size: large;
     font-weight: bold;
     background-color: black;
-    background-image: url(vortex\ logo.png);
+    background-image:none;
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed;
