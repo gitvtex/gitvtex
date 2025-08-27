@@ -319,6 +319,7 @@ a {
     height: 100%;
     object-fit: cover;
     z-index: -1; /* Ensure the video is behind other content */
+    image-resolution: 768dpi;
   }
 
   #header-items {
@@ -333,16 +334,16 @@ a {
     align-items: center;
     gap: 20px;
     max-width: 100%;
-    margin: 0;
-    padding: 0;
+    margin: 1 0;
+    padding: 3rem;
     font-size: 1.5rem;
     font-weight: bold;
     background-color: black;
     background-image: url(vortex\ logo.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position:top;
     border-top: 5px solid rgba(255, 123, 7, 0.8);
     border-bottom: 5px solid rgba(255, 123, 7, 0.8);
     background-color: black;
