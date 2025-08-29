@@ -251,7 +251,7 @@ a {
     border-radius: 10px;
 }
 
-.item-6 {
+/*.item-6 {
     background-image: url(vlogocomingsoon.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -265,7 +265,7 @@ a {
     border: 5px solid rgba(149, 198, 77, 0.8);
     border-radius: 10px;
     background-color: aliceblue;
-}
+} */
 
 .grow:hover { /* grow effect on item boxes when hovered over with mouse*/
     transform: scale(1.025);
