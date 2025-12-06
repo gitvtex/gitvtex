@@ -1,101 +1,226 @@
 <!DOCTYPE html>
-    <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VORTEX</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="vortex logo.png">
- </head>
-  <body>
-      <video class="video-background" autoplay muted loop> 
-        <source src="BGV1080P_Glitch_open.mp4" type="video/mp4">
-        <source src="BGV1080P_Glitch_open.webm" type="video/webm">
-        Your browser does not support the video tag.
-      </video>
-    <header>
-      <div id="header">
-        <h3 class="vtex">
-          <a href="#rules-text"><div id="header-items" class="glow grow">Server Rules</div></a>
-          <div id="header-items" class="glow grow">Server Info</div>
-          <div id="header-items" class="glow grow">Donate to Vortex</div>
-        </h3>
-      </div>
-    </header>
-    <section>
-      <div class="blank-space"><h2 id="vtex-word">VORTEX</h2></div>
-      <div class="join"></div>
+<html lang="en">
+<head>
+  <!-- Essential Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>VORTEX - Premium Gaming Server | Custom Skins & Features</title>
+  <meta name="description" content="Join VORTEX gaming server with custom weapon skins, vehicle skins, clan tags, and exclusive features. Connect with our community on Discord.">
+  <meta name="keywords" content="VORTEX, gaming server, custom skins, clan tags, discord server, gaming community">
+  <meta name="author" content="VORTEX">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gitvtex.github.io/">
+  <meta property="og:title" content="VORTEX - Premium Gaming Server">
+  <meta property="og:description" content="Join VORTEX gaming server with custom weapon skins, vehicle skins, and exclusive features.">
+  <meta property="og:image" content="https://gitvtex.github.io/vtex_is_live_2.0.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://gitvtex.github.io/">
+  <meta property="twitter:title" content="VORTEX - Premium Gaming Server">
+  <meta property="twitter:description" content="Join VORTEX gaming server with custom weapon skins, vehicle skins, and exclusive features.">
+  <meta property="twitter:image" content="https://gitvtex.github.io/vtex_is_live_2.0.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="vortex logo.png">
+  <link rel="apple-touch-icon" href="vortex logo.png">
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="BGV1080P_Glitch_open.webm" as="video" type="video/webm">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#000000">
+  
+  <!-- Accessibility: Reduced Motion -->
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .video-background {
+        display: none;
+      }
+    }
+  </style>
+</head>
 
-      
-        <br>
-        <br>
-        <br>
-        <br>
-       <!-- container for all listed items-->
-      <div class="list">
-        <div class="item-1 grow glow",>
-          <p class="p-color">Custom Weapon skin</p>
-        </div>
-
-        <div class="item-2 grow glow">
-          <p class="p-color">Custom clan tag</p>
-        </div>
-
-        <div class="item-3 grow glow">
-          <p class="p-color">Custom vehicle skin</p>
-        </div>
-
-        <div class="item-4 grow glow">
-          <p class="p-color">Custom chat tag</p>
-        </div>
-
-        <div class="item-5 grow glow">
-          <p class="p-color">Custom clothing</p>
-        </div>
-
-        <!-- <div class="item-6 grow glow">
-          <p class="p-color">Custom storage</p>
-        </div> -->
+<body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+  
+  <!-- Background Video -->
+  <video 
+    class="video-background" 
+    autoplay 
+    muted 
+    loop 
+    playsinline
+    preload="metadata"
+    poster="Background_Image.jpg"
+    aria-hidden="true">
+    <source src="BGV1080P_Glitch_open.webm" type="video/webm">
+    <source src="BGV1080P_Glitch_open.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+  <!-- Header Navigation -->
+  <header role="banner">
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <ul class="vtex">
+        <li>
+          <a href="#rules-section" class="header-items glow grow" aria-label="View server rules">
+            Server Rules
+          </a>
+        </li>
+        <li>
+          <a href="#features-section" class="header-items glow grow" aria-label="View server information">
+            Server Info
+          </a>
+        </li>
+        <li>
+          <a href="https://discord.gg/HYZXB2fWZ2" class="header-items glow grow" target="_blank" rel="noopener noreferrer" aria-label="Donate to Vortex (opens in new tab)">
+            Donate to Vortex
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    
+    <!-- Hero Section -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="blank-space">
+        <h1 id="hero-title" class="vtex-word">VORTEX</h1>
       </div>
     </section>
-    <!-- container for all listed items END-->
-      <div class="server-live"><a href="https://discord.gg/HYZXB2fWZ2" target="_blank"><img src="vtex_is_live_2.0.png"></a></div>
     
-
-    <div class="rules">
-      <h2 class="rules-header"><div class="glow-text"><u>SERVER RULES</u></div></h2>
-        <p class="rules-text" id="rules-text">
-        🌪️ Vortex Discord Rules 🌪️<br>
-
-        🙌 Maintain Respect: Ensure all General Chats are polite and respectful.<br>
-        <br>
-        🚫 Avoid Spamming: Do not engage in spamming, racism, or harassment in any channel.<br>
-        <br>
-        🚫 Prohibit Harassment: Any form of harassment, doxing (including threats), or behavior that is homophobic, transphobic, xenophobic, racist, sexist, or pedophilic is strictly forbidden, even if presented as a joke or meme. General trash-talking is acceptable.<br>
-        <br>
-        🚫 No DDOS, Hacking, or Glitching Discussions: Refrain from discussing DDOS, hacking, or glitching outside of report tickets and bug reports.<br>
-        <br>
-        📢 No Server Advertising: Promoting other servers in-game or within the Vortex Discord is not allowed.<br>
-        <br>
-        🚫 No Mass Tagging: Refrain from mass tagging users.<br>
-        <br>
-        🚫 Avoid Tagging Staff: Do not tag staff members unnecessarily.<br>
-        <br>
-        🛡️ Comply with Discord's TOS: Do not discuss topics that may violate Discord's Terms of Service.<br>
-        <br>
-        ⚠️ Discourage Toxic Behavior: Creating toxic situations or debates to undermine other players or staff members is unacceptable.<br>
-        <br>
-        🚫 No False Tickets: Do not create false tickets.<br>
-        <br>
-        🔠 Appropriate Nicknames: Nicknames must not contain invisible, unreadable, or unmentionable characters that hinder chat interaction.<br>
-        <br>
-        📩 No Direct Messaging Staff: Direct messages to Vortex Staff are prohibited. Use the ticket system in <#1333540622677708820>  instead. All direct message requests will be ignored.<br>
-        <br>
-        Most of these guidelines are based on common sense. Any mods, deigns, donations or type of contributions given to the server is done willing and by your own choice, you are agreeing to giving the intellectual  and  rights of ownership of the item(s) over to the Vortex Owner. If a Moderator or Administrator suspects that you're knowingly breaking the rules, you may face punishment without prior warning.<br>
-        <br>
-        By joining the  Vortex Discord Server<br> , you agree to abide by our rules and grant consent for recording and usage of media where necessary. Discord rules may be subject to change at any time. Discord Mods, Admins, and the Owner reserves the right to handle situations on an individual basis. once you done Reading go to verify channel to have access to the other channels.<br>
-     </p>
+    <!-- Features Section -->
+    <section id="features-section" class="features-section" aria-labelledby="features-title">
+      <h2 id="features-title" class="sr-only">Server Features</h2>
+      
+      <div class="list">
+        <article class="feature-item grow glow" tabindex="0">
+          <p class="p-color">Custom Weapon Skin</p>
+        </article>
+        
+        <article class="feature-item grow glow" tabindex="0">
+          <p class="p-color">Custom Clan Tag</p>
+        </article>
+        
+        <article class="feature-item grow glow" tabindex="0">
+          <p class="p-color">Custom Vehicle Skin</p>
+        </article>
+        
+        <article class="feature-item grow glow" tabindex="0">
+          <p class="p-color">Custom Chat Tag</p>
+        </article>
+        
+        <article class="feature-item grow glow" tabindex="0">
+          <p class="p-color">Custom Clothing</p>
+        </article>
+      </div>
+    </section>
+    
+    <!-- Server Live / Discord Link Section -->
+    <section class="server-live-section" aria-labelledby="discord-title">
+      <h2 id="discord-title" class="discord-header">
+        <span class="glow-text"><h2>CLICK TO JOIN</h2></span>
+      </h2>
+      <a 
+        href="https://discord.gg/HYZXB2fWZ2" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="server-live"
+        aria-label="Join VORTEX Discord Server (opens in new tab)">
+        <img 
+          src="vtex_is_live_2.0.png" 
+          alt="VORTEX is Live - Join our Discord server"
+          loading="lazy"
+          width="800"
+          height="auto">
+      </a>
+    </section>
+    
+    <!-- Server Rules Section -->
+    <section id="rules-section" class="rules-section" aria-labelledby="rules-header">
+      <h2 id="rules-header" class="rules-header">
+        <span class="glow-text">SERVER RULES</span>
+      </h2>
+      
+      <article class="rules-text" role="article">
+        <div class="rules-content">
+          <p><strong>🌪️ Vortex Discord Rules 🌪️</strong></p>
+          
+          <ul class="rules-list">
+            <li><strong>🙌 Maintain Respect:</strong> Ensure all General Chats are polite and respectful.</li>
+            
+            <li><strong>🚫 Avoid Spamming:</strong> Do not engage in spamming, racism, or harassment in any channel.</li>
+            
+            <li><strong>🚫 Prohibit Harassment:</strong> Any form of harassment, doxing (including threats), or behavior that is homophobic, transphobic, xenophobic, racist, sexist, or pedophilic is strictly forbidden, even if presented as a joke or meme. General trash-talking is acceptable.</li>
+            
+            <li><strong>🚫 No DDOS, Hacking, or Glitching Discussions:</strong> Refrain from discussing DDOS, hacking, or glitching outside of report tickets and bug reports.</li>
+            
+            <li><strong>📢 No Server Advertising:</strong> Promoting other servers in-game or within the Vortex Discord is not allowed.</li>
+            
+            <li><strong>🚫 No Mass Tagging:</strong> Refrain from mass tagging users.</li>
+            
+            <li><strong>🚫 Avoid Tagging Staff:</strong> Do not tag staff members unnecessarily.</li>
+            
+            <li><strong>🛡️ Comply with Discord's TOS:</strong> Do not discuss topics that may violate Discord's Terms of Service.</li>
+            
+            <li><strong>⚠️ Discourage Toxic Behavior:</strong> Creating toxic situations or debates to undermine other players or staff members is unacceptable.</li>
+            
+            <li><strong>🚫 No False Tickets:</strong> Do not create false tickets.</li>
+            
+            <li><strong>📛 Appropriate Nicknames:</strong> Nicknames must not contain invisible, unreadable, or unmentionable characters that hinder chat interaction.</li>
+            
+            <li><strong>📩 No Direct Messaging Staff:</strong> Direct messages to Vortex Staff are prohibited. Use the ticket system instead. All direct message requests will be ignored.</li>
+          </ul>
+          
+          <p class="rules-disclaimer">
+            Most of these guidelines are based on common sense. Any mods, designs, donations or type of contributions given to the server is done willingly and by your own choice. You are agreeing to give the intellectual and rights of ownership of the item(s) over to the Vortex Owner. If a Moderator or Administrator suspects that you're knowingly breaking the rules, you may face punishment without prior warning.
+          </p>
+          
+          <p class="rules-disclaimer">
+            By joining the Vortex Discord Server, you agree to abide by our rules and grant consent for recording and usage of media where necessary. Discord rules may be subject to change at any time. Discord Mods, Admins, and the Owner reserve the right to handle situations on an individual basis. Once you're done reading, go to the verify channel to have access to the other channels.
+          </p>
+        </div>
+      </article>
+    </section>
+    
+  </main>
   
-   </div>       
-  </body>
+  <!-- Footer -->
+  <footer role="contentinfo" class="site-footer">
+    <p>&copy; 2024 VORTEX Gaming Server. All rights reserved.</p>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="index.js"></script>
+  
+  <!-- Noscript Fallback -->
+  <noscript>
+    <style>
+      .video-background { display: none; }
+      body::before { opacity: 1; }
+    </style>
+    <div class="noscript-warning" role="alert">
+      <p>JavaScript is disabled. Some features may not work properly.</p>
+    </div>
+  </noscript>
+</body>
 </html>

@@ -1,369 +1,665 @@
+/* ==========================================================================
+   VORTEX Gaming Server - Optimized Styles
+   ========================================================================== */
+
+/* CSS Variables for easy theming and maintenance */
+:root {
+  --color-primary: rgb(255, 132, 0);
+  --color-primary-glow: rgba(255, 132, 0, 0.816);
+  --color-secondary: rgb(255, 220, 130);
+  --color-accent: rgb(149, 198, 77);
+  --color-dark: rgb(10, 53, 83);
+  --color-gray: rgb(104, 108, 111);
+  --color-gray-dark: rgb(51, 51, 47);
+  --color-text-light: whitesmoke;
+  --color-bg-dark: #000000;
+  
+  --border-radius-sm: 10px;
+  --border-radius-md: 25px;
+  --border-width: 5px;
+  
+  --transition-speed: 0.2s;
+  --transition-glow: 0.3s;
+  
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 5rem;
+  --spacing-xl: 10rem;
+}
+
+/* ==========================================================================
+   Base Styles & Reset
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background-color: black;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Skip to main content link for accessibility */
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ==========================================================================
+   Background Video & Image
+   ========================================================================== */
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.8;
 }
 
 body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(background_image_2.PNG.png) no-repeat center center fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1; /* Ensure the background image is behind other content */
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(background_image_2.PNG.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}    
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
 
-.vtex { /*words inside header */
-    color: rgb(10, 53, 83);
-    background-color: rgba(104, 108, 111, 0.43);
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 0.5%;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border: 0rem;
-    margin-left: 0rem;
-    margin-right: 0rem;
-    margin-top: 0rem;
-    margin-bottom: 0;
-
-
-    
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  background: linear-gradient(135deg, rgba(10, 10, 15, 0.85) 0%, rgba(20, 25, 35, 0.9) 100%);
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, 
+    rgba(149, 198, 77, 0) 0%, 
+    rgba(149, 198, 77, 0.8) 20%, 
+    rgba(255, 132, 0, 0.8) 50%, 
+    rgba(149, 198, 77, 0.8) 80%, 
+    rgba(149, 198, 77, 0) 100%);
+  border-image-slice: 1;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
-.header header {
- margin: 0;
- padding: 0;
- border: 0;
- position: absolute;
- top: 0;
- bottom: 0;
+.main-nav {
+  width: 100%;
 }
 
-
-#header-items {
-    color:rgb(255, 220, 130);
-    padding: .05rem 1rem;
-    border-radius: 25px;
-    margin-top: 1rem;
+.vtex {
+  list-style: none;
+  margin: 0;
+  padding: 1.2rem var(--spacing-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  position: relative;
 }
 
-p {
-    text-align: center;
-    color: whitesmoke;
+.vtex::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(149, 198, 77, 0.3) 20%, 
+    rgba(255, 132, 0, 0.5) 50%, 
+    rgba(149, 198, 77, 0.3) 80%, 
+    transparent 100%);
 }
 
-.server-live img {
-    display: inline-block;
-    padding: 0rem;
-    margin: 10rem 0rem 5rem 0rem;
-    border: 5px solid rgba(149, 198, 77, 0.8);
-    border-radius: 1%;
-    max-width: 73%;
-    max-height: auto;
-    position: relative;
+.vtex li {
+  margin: 0;
+  position: relative;
 }
 
-/* .discord-link {       "Come back to this later" cvs
-    position: absolute;
-    top: 300%;
-    left: 49%;
-    transform: translate(-50%, -50%);
-    color: aliceblue;
-    border: 5px solid rgba(149, 198, 77, 0.8);
-    padding: 85px 215px 85px 215px;
-}
-*/ 
-.rules-text {
-    display: flex;
-    text-align: left;
-    padding: 5% 1% 5% 5%;
-    margin: 0rem;
-    margin-top: 0rem;;
-    border: 0.3rem solid;
-    border-color: rgb(51, 51, 47);
-    background-color: rgb(104, 108, 111);
-    border-radius: 10px;
-    font-size: x-large;
-    font-weight: bold;
-    color: black;
-    
+.header-items {
+  display: inline-block;
+  color: var(--color-secondary);
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 132, 0, 0.05) 0%, rgba(149, 198, 77, 0.05) 100%);
+  border: 1px solid rgba(255, 132, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 2px 10px rgba(255, 132, 0, 0.1);
 }
 
-.rules-header {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding: 10% 0% 2% 0%;
-    margin: 0rem;
-    border-bottom: 0.2rem;
-    font-size: 3rem;
-    color: rgb(93, 124, 147);
+.header-items::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 132, 0, 0.3) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
 }
 
-a {
-    text-decoration: none;
-    color: rgb(43, 81, 98);
-    cursor: pointer;
+.header-items:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
-.blank-space { /* blank space between header and item boxes */
-    background-size:cover;
-    background-position: center;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    padding: 25%;
-    font-size: 2rem;
-    font-weight: bold;
+.header-items:hover,
+.header-items:focus {
+  color: rgb(255, 220, 130);
+  background: linear-gradient(135deg, rgba(255, 132, 0, 0.15) 0%, rgba(149, 198, 77, 0.15) 100%);
+  border-color: rgba(255, 132, 0, 0.6);
+  box-shadow: 
+    0 0 20px rgba(255, 132, 0, 0.4),
+    0 0 40px rgba(255, 132, 0, 0.2),
+    inset 0 0 20px rgba(255, 132, 0, 0.1);
+  transform: translateY(-2px);
 }
 
-#vtex-word {
-  display: none;
+.header-items:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 0 10px rgba(255, 132, 0, 0.3),
+    inset 0 0 15px rgba(255, 132, 0, 0.2);
 }
 
-.list { /* container for all listed items */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 70px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 200px 5rem 200px 5rem;
-    font-size: 2rem;
-    font-weight: bold;
-    background-color: black;
-    background-image: url(vortex\ logo.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: center;
-    border-top: 5px solid rgba(255, 123, 7, 0.8);
-    border-bottom: 5px solid rgba(255, 123, 7, 0.8);
-    background-color: black;
+/* ==========================================================================
+   Main Content
+   ========================================================================== */
+
+main {
+  position: relative;
+  z-index: 1;
 }
 
-.item-1 {
-    background-image: url(vlogocomingsoon.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    max-width: 350px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    background-color: aliceblue;
-    font-size: 2rem;
-    font-weight: bold;
-    border: 5px solid rgba(149, 198, 77, 0.8);
-    border-radius: 10px;
-}
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
 
-.item-2 {
-    background-image: url(vlogocomingsoon.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    max-width: 350px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    background-color: aliceblue;
-    font-size: 2rem;
-    font-weight: bold;
-    border: 5px solid rgba(149, 198, 77, 0.8);
-    border-radius: 10px;
-}
-
-.item-3 {
-    background-image: url(vlogocomingsoon.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    max-width: 350px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    background-color: aliceblue;
-    font-size: 2rem;
-    font-weight: bold;
-    border: 5px solid rgba(149, 198, 77, 0.8);
-    border-radius: 10px;
-}
-
-.item-4 {
-    background-image: url(vlogocomingsoon.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    max-width: 350px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    background-color: aliceblue;
-    font-size: 2rem;
-    font-weight: bold;
-    border: 5px solid rgba(149, 198, 77, 0.8);
-    border-radius: 10px;
-}
-
-.item-5 {
-    background-image: url(vlogocomingsoon.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    max-width: 350px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    background-color: aliceblue;
-    font-size: 2rem;
-    font-weight: bold;
-    border: 5px solid rgba(149, 198, 77, 0.8);
-    border-radius: 10px;
-}
-
-/*.item-6 {
-    background-image: url(vlogocomingsoon.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    font-size: 2rem;
-    font-weight: bold;
-    width: 100%;
-    max-width: 350px;
-    height: 300px;
-    object-fit: cover;
-    border: 5px solid rgba(149, 198, 77, 0.8);
-    border-radius: 10px;
-    background-color: aliceblue;
-} */
-
-.grow:hover { /* grow effect on item boxes when hovered over with mouse*/
-    transform: scale(1.025);
-    transition: 0.2s ease-in-out;
-}
-
-.glow:hover { /* green glow around the item boxes when hovered over with mouse*/
-    color: rgb(255, 123, 7);
-    box-shadow:   0 0 50px rgb(255, 128, 0);
-    background-color: rgb(0, 0, 0);
-}
-
-.glow-text { /* green glow for text */
-    color: rgb(255, 132, 0);
-    text-shadow:   0 0 30px rgba(255, 132, 0, 0.816);
-}
-
-
-
-.p-color { /* "Custom" word on item boxes*/
-    color:rgb(255, 220, 130);
-    background-color: rgba(0, 0, 0, 0.481);;
-    text-align: center;
-    margin-top: 0;
-    padding-bottom: 5px;
-    padding-top: 2px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-/* Media query*/
-
-
-  @media only screen and (max-width: 720px) and (min-height: 400px) and (max-height: 800px) { 
-    body {
-        background-color: black;
-  }
-
-  body::before {
-    background-image: url(background_image_2.PNG.png);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: auto;
-  }
-
-  #header-items {
-    font-size: medium;
-}
-
-.list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 50px 1rem 50px 1rem;
-    font-size: medium;
-    font-weight: bold;
-    background-color: black;
-    background-image: url(vortex\ logo.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-attachment: fixed;
-    background-position:center center;
-    border-top: 5px solid rgba(255, 123, 7, 0.8);
-    border-bottom: 5px solid rgba(255, 123, 7, 0.8);
-    background-color: black;
-
+.hero-section {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .blank-space {
-    padding: 4%;
-  }
-
-#vtex-word {
-    display: inline-block;
-    color: rgb(255, 132, 0);
-    text-shadow:   0 0 30px rgba(255, 132, 0, 0.816);
-    font-size: 3.5rem;
-    padding-top: 5%;
-  } 
+  background-color: transparent;
+  padding: var(--spacing-xl) var(--spacing-sm);
+  text-align: center;
 }
 
+.vtex-word {
+  display: none; /* Hidden on desktop, shown on mobile */
+  color: var(--color-primary);
+  text-shadow: 0 0 30px var(--color-primary-glow);
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: bold;
+  margin: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
 
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
 
+/* ==========================================================================
+   Features Section
+   ========================================================================== */
 
+.features-section {
+  position: relative;
+  padding: var(--spacing-md) 0;
+}
 
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 200px var(--spacing-lg);
+  background-color: #1a1a1a;
+  background-image: url("vortex_logo_feature.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  border-top: var(--border-width) solid rgba(255, 123, 7, 0.8);
+  border-bottom: var(--border-width) solid rgba(255, 123, 7, 0.8);
+  position: relative;
+}
 
-/* End of media query */
+/* Feature Items - Using a shared class to reduce repetition */
+.feature-item {
+  background-image: url(vlogocomingsoon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  border-radius: var(--border-radius-sm);
+  border: var(--border-width) solid rgba(149, 198, 77, 0.8);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  will-change: transform;
+}
+
+.feature-item:hover,
+.feature-item:focus {
+  transform: scale(1.1) !important;
+  box-shadow: 0 0 50px rgb(255, 128, 0), 0 0 100px rgba(255, 128, 0, 0.5) !important;
+}
+
+.feature-item:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.p-color {
+  color: var(--color-secondary);
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  margin: 0;
+  padding: 8px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-top-right-radius: var(--border-radius-sm);
+  border-top-left-radius: var(--border-radius-sm);
+  width: 100%;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* ==========================================================================
+   Hover Effects
+   ========================================================================== */
+
+.grow:hover,
+.grow:focus {
+  transform: scale(1.05);
+}
+
+.glow:hover,
+.glow:focus {
+  color: rgb(255, 123, 7);
+  box-shadow: 0 0 50px rgb(255, 128, 0), 0 0 100px rgba(255, 128, 0, 0.5);
+  background-color: rgb(0, 0, 0);
+}
+
+.glow-text {
+  color: var(--color-primary);
+  text-shadow: 0 0 30px var(--color-primary-glow);
+}
+
+/* ==========================================================================
+   Server Live / Discord Section
+   ========================================================================== */
+
+.server-live-section {
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-sm);
+}
+
+.discord-header {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: var(--spacing-md);
+  color: rgb(93, 124, 147);
+}
+
+.server-live {
+  display: inline-block;
+  transition: transform var(--transition-speed) ease-in-out;
+}
+
+.server-live:hover,
+.server-live:focus {
+  transform: scale(1.02);
+}
+
+.server-live img {
+  max-width: 45%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Rules Section
+   ========================================================================== */
+
+.rules-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-sm);
+}
+
+.rules-header {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: var(--spacing-md);
+  color: rgb(93, 124, 147);
+}
+
+.rules-text {
+  background-color: var(--color-gray);
+  border: 0.3rem solid var(--color-gray-dark);
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-lg);
+  line-height: 1.8;
+}
+
+.rules-content {
+  color: var(--color-bg-dark);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 600;
+}
+
+.rules-content strong {
+  font-weight: 800;
+}
+
+.rules-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-md) 0;
+}
+
+.rules-list li {
+  margin-bottom: var(--spacing-sm);
+  padding-left: var(--spacing-sm);
+  position: relative;
+}
+
+.rules-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.rules-disclaimer {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+  border-top: 2px solid var(--color-gray-dark);
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  text-align: center;
+  padding: var(--spacing-md);
+  background-color: rgba(0, 0, 0, 0.8);
+  border-top: 2px solid var(--color-gray-dark);
+  margin-top: var(--spacing-xl);
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-secondary);
+}
+
+/* ==========================================================================
+   Noscript Warning
+   ========================================================================== */
+
+.noscript-warning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 165, 0, 0.9);
+  color: black;
+  padding: var(--spacing-sm);
+  text-align: center;
+  z-index: 9999;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   Media Queries - Responsive Design
+   ========================================================================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .list {
+    gap: 50px;
+    padding: 150px var(--spacing-md);
+  }
+  
+  .vtex {
+    gap: var(--spacing-sm);
+  }
+  
+  .header-items {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 720px) {
+  :root {
+    --spacing-lg: 2rem;
+    --spacing-xl: 5rem;
+  }
+  
+  .vtex {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs);
+  }
+  
+  .header-items {
+    font-size: 1rem;
+    padding: 0.4rem var(--spacing-sm);
+  }
+  
+  .blank-space {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+  
+  .vtex-word {
+    display: block;
+    font-size: 3.5rem;
+  }
+  
+  .list {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 50px var(--spacing-sm);
+    background-size: cover;
+  }
+  
+  .feature-item {
+    max-width: 100%;
+  }
+  
+  .server-live img {
+    max-width: 90%;
+  }
+  
+  .rules-text {
+    padding: var(--spacing-md);
+  }
+  
+  .rules-content {
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .header-items {
+    font-size: 0.875rem;
+    padding: 0.3rem 0.75rem;
+  }
+  
+  .vtex-word {
+    font-size: 2.5rem;
+  }
+  
+  .p-color {
+    font-size: 1.25rem;
+  }
+  
+  .list {
+    gap: 20px;
+    padding: 30px var(--spacing-sm);
+  }
+}
+
+/* High Resolution / Large Screens */
+@media (min-width: 1920px) {
+  .list {
+    max-width: 1600px;
+    gap: 80px;
+  }
+  
+  .rules-section {
+    max-width: 1400px;
+  }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+  .video-background,
+  header,
+  .server-live-section,
+  .site-footer {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .rules-text {
+    border: 2px solid black;
+    background: white;
+  }
+}
+
+/* ==========================================================================
+   Reduced Motion Support
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .video-background {
+    display: none;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+  }
+}
